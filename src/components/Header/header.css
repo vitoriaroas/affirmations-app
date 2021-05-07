@@ -1,0 +1,7 @@
+.navbar-brand {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 48px !important;
+  color: rgb(244, 208, 10) !important;
+  text-shadow: 2px 2px 4px #000000;
+}

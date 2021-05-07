@@ -3,13 +3,13 @@ import LoginButton from './LoginButton'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import { UserAuthContext } from '../../App'
-
+import './header.css'
 
 function Header() {
   const { user } = useContext(UserAuthContext)
   return (
     <Navbar className="justify-content-between">
-      <Navbar.Brand>Affirmations</Navbar.Brand>
+      <Navbar.Brand className="navbar-brand">Affirmations</Navbar.Brand>
       <Nav>
         {user && <button className="add-button">+</button>}
         <Nav.Link>
