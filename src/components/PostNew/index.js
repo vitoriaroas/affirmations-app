@@ -1,32 +1,32 @@
-import React, { useContext, useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import { UserAuthContext, AffirmationsContext } from '../../App'
 
 function PostNew(props) {
   const [newText, setNewText] = useState('')
   const { user } = useContext(UserAuthContext)
-  const { setAffirmationList } = useContext(AffirmationsContext)
+  const { setAffirmationsList } = useContext(AffirmationsContext)
   const handleSubmit = () => {
     const newAffirmation = {
       text: newText,
       uid: user.uid,
       displayName: user.displayName,
-      photUrl: user.photUrl,
+      photoUrl: user.photoURL
     }
-    fetch('https://affirm-bc-api.web.app/affirmations', {
+    fetch('https://affirm-vr-api.web.app/affirmations', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newAffirmation),
+      body: JSON.stringify(newAffirmation)
     })
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         setNewText('')
         props.onHide()
-        setAffirmationList(data)
+        setAffirmationsList(data)
       })
-      .catch((err) => console.log(err))
+      .catch(err => console.log(err))
   }
   return (
     <Modal {...props} centered>
@@ -39,8 +39,7 @@ function PostNew(props) {
           onChange={(e) => setNewText(e.target.value)}
           rows="3"
           cols="40"
-        >
-          Your affirmation here...
+          placeholder="Your affirmation here...">
         </textarea>
       </Modal.Body>
       <Modal.Footer>

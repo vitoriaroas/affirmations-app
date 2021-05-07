@@ -27,7 +27,9 @@ function LoginButton() {
         .catch((err) => alert(err))
     }
   }
-  return <button onClick={() => clickHandler()}>#</button>
+  return <button onClick={() => clickHandler()} type="button" class="btn btn-warning">Login</button>
 }
 
 export default LoginButton
+
+//<img className='login' src='../../login.jpg'/>

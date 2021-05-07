@@ -14,7 +14,7 @@ function Header() {
     <Navbar className="justify-content-between">
       <Navbar.Brand className="navbar-brand">Affirmations</Navbar.Brand>
       <Nav>
-        {user && <button className="add-button" onClick={() => setShowModal(true)}>+</button>}
+        {user && <button className="add-button" type="button" class="btn btn-warning" onClick={() => setShowModal(true)}>Create</button>}
         <Nav.Link>
           <LoginButton />
         </Nav.Link>

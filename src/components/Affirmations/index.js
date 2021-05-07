@@ -8,7 +8,7 @@ import './affirmation.css'
 function Affirmations() {
   const { affirmationsList, setAffirmationsList} = useContext(AffirmationsContext)
     useEffect(() => {
-        fetch('https://affirm-bc-api.web.app/affirmations')
+        fetch('https://affirm-vr-api.web.app/affirmations')
         .then(response => response.json())
         .then(data => setAffirmationsList(data))
         .catch(err => console.log({ err }))
