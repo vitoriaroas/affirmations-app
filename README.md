@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## to install libraries 
+
+Run `yarn`
+
+## to deploy
+Run `yarn deploy`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
