@@ -16,7 +16,7 @@ if (firebase.apps.length === 0) {
 function LoginButton() {
   const { user, setUser } = useContext(UserAuthContext)
   useEffect(() => {
-   setUser(JSON.parse(localStorage.getItem('user')))
+    setUser(JSON.parse(localStorage.getItem('user')))
   }, [])
   const clickHandler = () => {
     if (user) {
@@ -35,11 +35,7 @@ function LoginButton() {
     }
   }
   return (
-    <button
-      onClick={() => clickHandler()}
-      type="button"
-      class="btn btn-warning"
-    >
+    <button onClick={() => clickHandler()} type="button" className="btn btn-warning">
       Login
     </button>
   )

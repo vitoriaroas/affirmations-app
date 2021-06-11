@@ -1,5 +1,8 @@
 .card-display {
-    background-color: beige;
-    font-family: 'IBM Plex Mono', monospace;
-  }
-  
+  background-color: beige;
+  font-family: 'IBM Plex Mono', monospace;
+  width: auto;
+  height: 20vw;
+  object-fit: cover;
+
+}

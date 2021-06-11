@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Header from './components/Header'
 import Affirmations from './components/Affirmations'
-import Footer from './components/Footer'
 import Container from 'react-bootstrap/Container'
 import '.'
 
@@ -21,7 +20,6 @@ function App() {
       <Container>
         <Affirmations />
       </Container>
-      <Footer />
     </UserAuthContext.Provider>
     </AffirmationsContext.Provider>
 
